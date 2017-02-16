@@ -1,0 +1,3 @@
+- 네이버 금융홈에서 "오늘의증시", "해외증시" 현황 Crawling (Must)
+- 네이버 금융의 "MY금융" 에 등록된 주식현황 Crawling (Have to)
+- Crawling 데이터 DB 저장 및 조회 (Option)
