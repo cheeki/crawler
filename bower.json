@@ -1,0 +1,21 @@
+{
+  "name": "crawler",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Jungmin Yoon <cheeki101@sk.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/cheeki/crawler",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
