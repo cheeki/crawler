@@ -33,7 +33,7 @@ router.get('/getIntl', (req, res) => {
 
 
 router.get('/fetch', (req, res) => {
-    crawl((result) => {
+    crawl(() => {
         res.status(200).send();
     });
 });
