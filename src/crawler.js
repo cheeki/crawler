@@ -22,14 +22,14 @@ const click = (selector) => {
 
 const waitUntil = (regexp, callback) => {
     var intervalTimer = setInterval(() => {
-        var pageUrl = _page.evaluate(() => {
+        _page.evaluate(() => {
             return location.href;
+        }).then((pageUrl) => {
+            if (pageUrl && regexp.test(pageUrl)) {
+                clearInterval(intervalTimer);
+                callback();
+            }
         });
-
-        if (pageUrl && regexp.test(pageUrl) ) {
-            clearInterval(intervalTimer);
-            callback();
-        }
     }, 10);
 };
 
