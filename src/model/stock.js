@@ -24,15 +24,15 @@ let StockSchema = new Schema({
     type: String
 });
 
-StockSchema.statics.findNewer = function (date, cb) {
-    this.find({ created_date: { $gte: date }})
-        .select('title tags deadline url')
+StockSchema.statics.findByType = function (type, cb) {
+    this.find({ type: type})
         .exec((err, docs) => {
             cb(err, docs.map(val => val.toObject()));
         });
 };
 
 export const Stock = connection.model(STOCK_MODEL, StockSchema);
+
 
 // StockSchema.pre('save', function (next) {
 //     Stock.find({stockId: this.stockId}).exec((err, docs) => {

@@ -12,7 +12,7 @@ fs.readdirSync('node_modules')
 
 module.exports = {
     entry: {
-        bot: "./src/bot.js",
+        bot: "./src/server/server.js",
     },
     target: 'node',
     node: {

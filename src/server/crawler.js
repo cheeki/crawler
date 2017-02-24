@@ -1,5 +1,5 @@
-import {Stock, TYPE} from './model/stock';
-import {logger} from './service/logger';
+import {Stock, TYPE} from '../model/stock';
+import {logger} from '../service/logger';
 import {accessPageAndDoTasks, _page} from './page';
 import path from 'path';
 
@@ -103,8 +103,8 @@ const parseTodayStock = () => {
             let $header = $(`.section_stock ${indexes[index].selector} .heading_area a`).eq(1),
                 $values = $header.find('.num_quot'),
                 name = indexes[index].name,
-                value = parseFloat($values.find('.num').text()),
-                change = parseFloat($values.find('.num2').text()),
+                value = parseFloat($values.find('.num').text().replace(",", "")),
+                change = parseFloat($values.find('.num2').text().replace(",", "")),
                 changeRate = $values.find('.num3')
                     .clone()    //clone the element
                     .children() //select all the children

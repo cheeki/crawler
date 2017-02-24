@@ -1,5 +1,5 @@
-import {logger} from './service/logger';
-import config from '../config/config';
+import {logger} from '../service/logger';
+import config from '../../config/config';
 import phantom from 'phantom';
 
 const requestURL = config.url;
